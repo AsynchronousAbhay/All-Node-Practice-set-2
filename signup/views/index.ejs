@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+
+<body>
+  <%- include('navigation')%>
+  <div class="container mt-5">
+    <h1 class="m-auto w-25">sign up</h1>
+    <form action="/signup" method="post" class=m-auto w-25">
+      <input class="m-auto" type="text" placeholder="name" name="name">
+      <input class="m-auto" type="username" placeholder="username" name="username">
+      <input class="m-auto" type="password" placeholder="****" name="password">
+      <button type="submit" class="btn btn-primary w-25 m-auto">signup</button>
+    </form>
+  </div>
+</body>
+
+</html>

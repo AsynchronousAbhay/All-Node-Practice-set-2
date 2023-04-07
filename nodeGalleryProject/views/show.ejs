@@ -1,0 +1,23 @@
+<%- include('header')%>
+  <%- include('nav')%>
+
+    <div class="container mt-5 d-flex flex-wrap">
+      <% cards.forEach((card)=>{%>
+        <div class="card" style="width: 18rem;">
+          <img src="/uploads/<%= card.image%>" class="card-img-top" alt="...">
+          <div class="card-body">
+            <a href="/update/<%= card.id%>">
+              <p><%= card.title%></p>
+              <p><%= card.author%></p>
+              <div>
+                <a href="/downlaod">downlaod</a>
+              </div>
+            </a>
+          </div>
+        </div>
+        <%})%>
+    </div>
+
+
+
+    <%- include('footer')%>

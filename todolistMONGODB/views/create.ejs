@@ -1,0 +1,12 @@
+<%- include('header')%>
+    <%- include('nav')%>
+
+        <div style="margin-top: 10vmax; display: flex; justify-content: center; align-items: center;">
+            <form action="/create" method="post">
+                <input type="text" placeholder="title" name="title">
+                <textarea name="desc"cols="30" rows="10"></textarea>
+                <button>add task</button>
+            </form>
+        </div>
+
+        <%- include('footer')%>

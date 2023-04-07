@@ -1,0 +1,22 @@
+<%- include('header')%>
+    <%- include('nav')%>
+
+
+        <div class="container mt-5">
+            <div>
+                <img height="150px" src="/uploads/<%= card.image%>" alt="">
+            </div>
+            <form action="/update/<%= card._id%>" enctype="multipart/form-data" method="post" class="form-control w-50">
+                <input type="text" name="title" placeholder="title" value="<%= card.title%>">
+                <input type="text" name="author" placeholder="author" value="<%= card.author%>">
+                <input type="file" name="image" placeholder="select_image">
+                <input type="hidden" name="oldimage" value="<%= card.image%>">
+                <button>update</button>
+                <a href="/delete/<%= card._id%>">delete</a>
+            </form>
+        </div>
+
+
+
+
+        <%- include('footer')%>

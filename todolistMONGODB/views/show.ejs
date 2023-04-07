@@ -1,0 +1,28 @@
+<%- include('header')%>
+    <%- include('nav')%>
+
+        <div style="margin-top: 10vmax; display: flex; justify-content: center; align-items: center;">
+            <% tasks.forEach((task)=>{%>
+                <div>
+                    <h2>
+                        <%= task.title%>
+                    </h2>
+                    <p>
+                        <%= task.desc%>
+                    </p>
+                    <span>
+                        <%= task.date.toLocaleDateString("en-us", {
+                            day: 'numeric',
+                            month: "long",
+                            year: "numeric",
+                          })%>
+                    </span>
+                    <br>
+                    <a href="/edit/<%= task.id%>">edit</a>
+                    <br>
+                    <a href="/delete/<%= task.id%>">delete</a>
+                </div>
+                <%})%>
+        </div>
+
+        <%- include('footer')%>
